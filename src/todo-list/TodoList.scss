@@ -1,0 +1,91 @@
+.todolist {
+  list-style-type: none;
+  padding: 1rem 0;
+  background: #fff;
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  &__row {
+    display: flex;
+    align-items: center;
+    & > input[type="checkbox"] {
+      margin-right: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+.status {
+  font-size: 0.9rem;
+
+  &--priority {
+    margin-right: 1rem;
+    text-transform: capitalize;
+  }
+
+  &--expiry {
+    padding: 0.5rem;
+  }
+}
+
+.icon-group {
+  display: flex;
+}
+
+.todo-title {
+  font-weight: 500;
+
+  &--completed {
+    text-decoration: line-through;
+    font-style: italic;
+  }
+}
+
+.todo {
+
+  &-title {
+    font-weight: 500;
+  
+    &--completed {
+      text-decoration: line-through;
+      font-style: italic;
+    }
+  }
+
+  color: var(-todo-color);
+  background: var(--todo-bg);
+  border: 1px solid var(--todo-border-color);
+
+  & + .todo {
+    border-top: 1px solid transparent;
+  }
+
+  &--past {
+    --todo-color: #842029;
+    --todo-bg: #f8d7da;
+    --todo-border-color: #f5c2c7;
+  }
+
+  &--present {
+    --todo-color: #664d03;
+    --todo-bg: #fff3cd;
+    --todo-border-color: #ffecb5;
+  }
+
+  &--future {
+    --todo-color: #0f5132;
+    --todo-bg: #d1e7dd;
+    --todo-border-color: #badbcc;
+  }
+}

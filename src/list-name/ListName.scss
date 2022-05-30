@@ -1,0 +1,25 @@
+.App-header {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  & > input[type="text"] {
+    padding: 0.5rem 1rem;
+    font-size: 24px;
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-right: 1rem;
+  }
+
+  &__icon {
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+
+.add-todo {
+  min-height: 5rem;
+  padding: 1rem;
+
+  &__title {
+    padding: 0;
+    margin: 0 0 1rem;
+
+    @media (max-width: 800px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  &__submit {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+  
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 800px) {
+    margin-bottom: 3rem;
+  }
+
+  &__label {
+    margin-bottom: 0.25rem;
+  }
+
+  &__control {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+}
+

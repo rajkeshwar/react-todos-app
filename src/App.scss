@@ -1,0 +1,36 @@
+.App {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.add-button {
+  display: flex;
+  justify-content: flex-end;
+
+  
+
+  & > button {
+    padding: 0.5rem 1rem;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-size: 18px;
+  width: 2rem;
+  height: 2rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
