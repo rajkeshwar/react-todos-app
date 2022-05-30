@@ -64,7 +64,7 @@ function App() {
         />
 
         <div className="add-button">
-          <button role="button" onClick={handleAddNew}>Add todo</button>
+          <button onClick={handleAddNew}>Add todo</button>
         </div>
       </div>
     </div>
