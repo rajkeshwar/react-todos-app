@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { getDeadline, sortByDeadline } from '../Todo';
 import './TodoList.scss';
 
-const TodoList = ({ todos = {}, onEdit, onDelete, onComplete }) => {
+const TodoList = ({ todos = [], onEdit, onDelete, onComplete }) => {
 
   return (
     <ul className="todolist">
@@ -25,8 +25,8 @@ const TodoList = ({ todos = {}, onEdit, onDelete, onComplete }) => {
             </div>
           </div>
           <span className="icon-group">
-            <i className="icon" onClick={() => onEdit(todo)}>✏️</i>
-            <i className="icon" onClick={() => onDelete(todo)}>❌</i>
+            <i className="icon" onClick={() => onEdit(todo)} role="button" aria-label="edit" >✏️</i>
+            <i className="icon" onClick={() => onDelete(todo)} role="button" aria-label="delete">❌</i>
           </span>
         </li>
       ))}

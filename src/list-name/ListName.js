@@ -11,13 +11,13 @@ const ListName = () => {
       {
         isEdit ? (
           <>
-            <input type="text" onChange={e => setName(e.target.value)} value={name} />
-            <i className="icon" onClick={() => setIsEdit(false)}>✔️</i>
+            <input type="text" name="listname" onChange={e => setName(e.target.value)} value={name} />
+            <i className="icon" onClick={() => setIsEdit(false)} role="button" aria-label="Update">✔️</i>
           </>
         ) : (
           <>
             <h3 className="App-header__title">{name}</h3>
-            <i className="icon" onClick={() => setIsEdit(true)}>✏️</i>
+            <i className="icon" onClick={() => setIsEdit(true)} role="button" aria-label="Edit" >✏️</i>
           </>
         )
       }

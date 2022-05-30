@@ -17,13 +17,21 @@ const AddTodo = ({ onAdd, todo, setTodo}) => {
       <form onSubmit={handleSubmit}>
         <h3 className="add-todo__title">Add new todo</h3>
         <div className="form-field">
-          <label htmlFor="todo" className="form-field__label">Title</label>
-          <input type="text" className="form-field__control" name="title" onChange={handleChange('title')} value={todo.title} />
+          <label htmlFor="title" className="form-field__label">Title</label>
+          <input type="text" className="form-field__control" name="title" 
+            id="title"
+            placeholder="title"
+            onChange={handleChange('title')} 
+            value={todo.title} />
         </div>
 
         <div className="form-field">
           <label htmlFor="priority" className="form-field__label">Priority</label>
-          <select className="form-field__control" onChange={handleChange('priority')} value={todo.priority}>
+          <select className="form-field__control" 
+            id="priority"
+            placeholder="priority"
+            onChange={handleChange('priority')} 
+            value={todo.priority}>
               <option value="LOW">Low</option>
               <option value="MEDIUM">Medium</option>
               <option value="HIGH">High</option>
@@ -32,7 +40,11 @@ const AddTodo = ({ onAdd, todo, setTodo}) => {
 
         <div className="form-field">
           <label htmlFor="date" className="form-field__label">Expiry date</label>
-          <input type="date" className="form-field__control" onChange={handleChange('date')} value={todo.date} />
+          <input type="date" className="form-field__control" 
+            id="date"
+            placeholder="date"
+            onChange={handleChange('date')} 
+            value={todo.date} />
         </div>
         <div className="form-field">
           <input type="submit" className="add-todo__submit" value="Add todo" />
